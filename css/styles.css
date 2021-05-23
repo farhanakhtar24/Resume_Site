@@ -1,16 +1,9 @@
 body {
+  background-color: #e8ffff;
   margin: 0;
   text-align: center;
   font-family: 'Merriweather Sans', sans-serif;
   color: #40514E;
-}
-
-h1 {
-  margin: 50px auto 0 auto;
-  font-family: 'Sacramento', cursive;
-  font-size: 5.625rem;
-  color: #00adb5;
-  line-height: 2;
 }
 
 h2 {
@@ -38,9 +31,10 @@ hr {
 }
 
 .top_container {
-  background-color: #e8ffff;
   position: relative;
   padding-top: 100px;
+  padding-bottom: 100px;
+
 }
 
 .bottom_container {
@@ -50,19 +44,32 @@ hr {
   line-height: 2;
 }
 
+.heading{
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  font-size: 5.625rem;
+  color: #00adb5;
+  line-height: 2;
+  animation-name: MoveInLeft;
+  animation-duration: 1s
+}
+
 .tm {
   color: #EAF6F6;
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 
 .contact-me {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   line-height: 2;
 }
 
 .programmer_sub {
-  line-height: 1
+  line-height: 1;
+  animation-name: MoveInRight;
+  animation-duration: 1s;
+
 }
 
 .cloud_1 {
@@ -137,11 +144,43 @@ hr {
   text-decoration: none;
 }
 
+@keyframes MoveInLeft {
+  0%{
+    opacity: 0;
+    transform: translate(-100px);
+  }
+
+  80%{
+    transform:translate(5px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes MoveInRight {
+  0%{
+    opacity: 0;
+    transform: translate(100px);
+  }
+
+  80%{
+    transform:translate(-5px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
 /*
 h1-#00adb5
 h2-#66BFBF
 h3-#11999E
-anchor_tag-#11999E
+anchor_tag-#23425f
 page_background - #e8ffff
 dots-#686d76
 #eeeeee
